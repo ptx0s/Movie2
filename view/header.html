@@ -1,0 +1,65 @@
+    <!-- Header Section Begin -->
+    <header class="header" ng-controller="HeaderController">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="header__logo">
+                        <a ng-href="javascript:void(0)" ng-click="Thaydoimanglienket()">
+                            <img src="img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="header__nav">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li class="active"><a ng-href="javascript:void(0);" ng-click="Thaydoimanglienket()"  >Trang Chủ</a></li>
+                                <li><a href="javascript:void(0);" ng-click="$event.preventDefault()" >Thể Loại<span class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown">
+                                        <li><a ng-href="#!/categories/{{'hoat-hinh'}}/{{1}}/{{1}}">Hoạt Hình</a></li>
+                                        <li><a ng-href="#!/categories/{{'hanh-dong'}}/{{1}}/{{1}}">Hành Động</a></li>
+                                        <li><a ng-href="#!/categories/{{'phieu-luu'}}/{{1}}/{{1}}">Phiêu lưu</a></li>
+                                        <li><a ng-href="#!/categories/{{'gia-tuong'}}/{{1}}/{{1}}">Giả Tưởng</a></li>
+                                        <li><a ng-href="#!/categories/{{'khoa-hoc-vien-tuong'}}/{{1}}/{{1}}">Khoa học viễn tưởng </a></li>
+                                        <li><a ng-href="#!/categories/{{'tinh-cam'}}/{{1}}/{{1}}">Tình Cảm</a></li>
+                                        <li><a ng-href="#!/categories/{{'tinh-cam'}}/{{1}}/{{1}}">Lãng Mạng</a></li>
+                                        <li><a ng-href="#!/categories/{{'co-trang'}}/{{1}}/{{1}}">Cổ Trang</a></li>
+                                        <li><a ng-href="#!/categories/{{'chien-tranh'}}/{{1}}/{{1}}">Chiến Tranh</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0);" ng-click="$event.preventDefault()" >Danh mục<span class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown">
+                                        <li ><a ng-href="#!/moicapnhat/{{'phim-moi-cap-nhat'}}/{{1}}/{{1}}">Phim mới cập nhật</a></li>
+                                        <li ng-repeat="danhmuc in danhmucs"><a ng-href="#!/danhmuc/{{danhmuc.id}}/{{1}}/{{1}}">{{danhmuc.name}}</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0);" ng-click="$event.preventDefault()" >Quốc gia<span class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown">
+                                        <li><a ng-href="#!/quocgias/{{'nhat-ban'}}/{{1}}/{{1}}">Nhật Bản</a></li>
+                                        <li><a ng-href="#!/quocgias/{{'viet-nam'}}/{{1}}/{{1}}">Việt Nam</a></li>
+                                        <li><a ng-href="#!/quocgias/{{'han-quoc'}}/{{1}}/{{1}}">Hàn Quốc</a></li>
+                                        <li><a ng-href="#!/quocgias/{{'trung-quoc'}}/{{1}}/{{1}}">Trung Quốc</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="javascript:void(0);" ng-click="$event.preventDefault()" >Năm<span class="arrow_carrot-down"></span></a>
+                                    <ul class="dropdown">
+                                        <li ng-repeat="year in years"><a ng-href="#!/namphathanhs/{{year}}/{{1}}/{{1}}">{{year}}</a></li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__right">
+                        <a href="javascript:void(0);" class="search-switch"  ng-click="$event.preventDefault()"><span class="icon_search" ></span></a>
+                        <a href="javascript:void(0);"><span class="icon_profile"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu-wrap"></div>
+        </div>
+    </header>
+    
+    <!-- Header End -->
